@@ -12,7 +12,7 @@ public class HelloWorldController {
 	@RequestMapping(method = RequestMethod.GET, path = "/hello-world")
 	public String helloWorld()
 	{
-		return "hello world";
+		return "hello world Rabi";
 	}
 	
 	@GetMapping(path = "/hello-world-bean/newBean/{name}")
