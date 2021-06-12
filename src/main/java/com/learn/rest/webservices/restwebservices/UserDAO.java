@@ -11,6 +11,8 @@ import com.learn.rest.webservices.bean.User;
 public class UserDAO {
 	
 	static ArrayList<User> arrayList = null;
+	
+	static int counter = 3;
 	static {
 		arrayList = new ArrayList<>();
 		arrayList.add(new User("Rabi", 1, new Date()));
@@ -33,5 +35,10 @@ public class UserDAO {
 		return null;
 	}
 	
-	
+	public User saveUser(User user)
+	{
+		user.setId(++counter);
+		arrayList.add(user);
+		return user;
+	}
 }
